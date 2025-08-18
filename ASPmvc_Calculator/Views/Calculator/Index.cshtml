@@ -1,15 +1,37 @@
-﻿<form >
+﻿@model int
+
+<form asp-action="Calculate" asp-controller="Calculator">
 	<div class="mb-3">
 	<label class="form-label">First number:</label>
-	<input class="form-control" />
+	<input class="form-control" type="number" step="any" name="num1" />
 	</div>
 
 	<div class="mb-3">
 	<label class="form-label">Second number:</label>
-	<input class="form-control" />
+	<input class="form-control" type="number" step="any" name="num2" />
+	</div>
+
+	<div class="mb-3 text-center">
+		<select class="form-select w-25" name="operation" required>
+			<option value="+">+ add</option>
+			<option value="-">- substract</option>
+			<option value="*">x multiply</option>
+			<option value="/">/ divide</option>
+		</select>
 	</div>
 
 	<div class="mb-3">
 	<button class="btn btn-primary" type="submit">Calculate</button>
 	</div>
 </form>
+
+
+@if (ViewBag.Result != null)
+{
+	<p class="text-success">Result: @ViewBag.Result</p>
+}
+
+@if (ViewBag.Error != null)
+{
+	<p class="text-danger">Error: @ViewBag.Error</p>
+}
