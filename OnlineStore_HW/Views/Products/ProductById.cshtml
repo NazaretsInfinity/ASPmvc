@@ -1,0 +1,30 @@
+﻿@using OnlineStore_HW.Models
+@model Product
+
+<table class="table table-stri">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">1</th>
+			<td>Name</td>
+			<td>@Model.Name</td>
+		</tr>
+
+		<tr>
+			<th scope="row">2</th>
+			<td>Description</td>
+			<td>@(Model.Description ?? "No description")</td>
+		</tr>
+		<tr>
+			<th scope="row">3</th>
+			<td>Price</td>
+			<td>@Model.Price</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,13 @@
+﻿@using OnlineStore_HW.Models
+
+@model List<Product>
+<ul style="list-style: none;">
+	@foreach(Product product in Model)
+	{
+		<li class="card-text border border-primary p-3 mb-2 fs-5">
+			<a asp-controller ="Products" asp-action="ProductById" asp-route-id="@product.Id">
+			@product.Name
+			</a>
+		</li>
+	}
+</ul>
