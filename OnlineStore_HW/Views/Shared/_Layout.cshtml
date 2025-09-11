@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
-
+@{
+    ViewBag.HasBreadcrumb = IsSectionDefined("Breadcrumb");
+}
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,6 +16,7 @@
     <div>
     <header>
         <partial name = "_NavigationPartial">
+        <partial name="_BreadcrumbsPartial" />
     </header>
     <main>
         @RenderBody()

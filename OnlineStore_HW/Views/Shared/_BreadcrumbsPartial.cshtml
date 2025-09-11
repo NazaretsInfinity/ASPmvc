@@ -1,0 +1,37 @@
+﻿@using OnlineStore_HW.Models.Utils
+
+@{
+	List <BreadcrumbItem> breadcrumbs = new List<BreadcrumbItem>()
+	{
+		new BreadcrumbItem("Home", "Home", "Index"),
+	};
+
+
+    if (ViewBag.Breadcrumb is not null)
+    {
+        foreach (BreadcrumbItem item in ViewBag.Breadcrumb)
+            breadcrumbs.Add(item);
+    }
+}
+<div class="container-md">
+    @if (ViewBag.HasBreadcrumb)
+    {
+        @RenderSection("Breadcrumb", false)
+    }
+    else
+    {
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                @foreach (BreadcrumbItem item in breadcrumbs)
+                {
+                 <li class="breadcrumb-item active">
+                     <a asp-controller="@item.ControllerName" asp-action="@item.ActionName">
+                         @item.Text
+                     </a>
+                 </li>
+                 
+                }
+            </ol>
+        </nav>
+    }
+</div>
