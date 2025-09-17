@@ -51,7 +51,8 @@ namespace OnlineStore_HW.Controllers
         [HttpPost]
         public IActionResult AddReview([FromForm]ReviewDTO review)
         {
-            Console.WriteLine("here");
+            if(!ModelState.IsValid) return Content($"Errors: {ModelState.ErrorCount}");
+
             return Content($"{review.Author}: {review.Text}");
         }
     }

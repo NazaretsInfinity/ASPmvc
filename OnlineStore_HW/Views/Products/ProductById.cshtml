@@ -32,20 +32,19 @@
 	</tbody>
 </table>
 
-@if(Model.ReviewDTO is not null)
-{
-	<hr/>
-	<h3>Review: </h3>
+<hr/>
+<h3>Review: </h3>
 
 	@using (Html.BeginForm("AddReview", "Products", FormMethod.Post))
 	{
 
 		
 		<div class="mb-3">
-			@* @Html.LabelFor(model => model.ReviewDTO.Author, htmlAttributes: new { @class = "form-label" }) 
-			 @Html.EditorFor(model => model.ReviewDTO.Author, new { htmlAttributes = new { @class = "form-control" } }) *@
-			<label for="Author" class="form-label">Author</label>
-			<input type="text" class="form-control" id="Author" name="Author">
+			 @Html.LabelFor(model => model.ReviewDTO.Author, htmlAttributes: new { @class = "form-label" }) 
+			 @Html.EditorFor(model => model.ReviewDTO.Author, new { htmlAttributes = new { @class = "form-control" } }) 
+			 <span class="text-danger" asp-validation-for="@Model.ReviewDTO.Author"></span>
+			@* <label for="Author" class="form-label">Author</label>
+			<input type="text" class="form-control" id="Author" name="Author"> *@
 		</div>
 
 		<div class="mb-3">
@@ -53,6 +52,7 @@
 			   @Html.EditorFor(model => model.ReviewDTO.Text, new { htmlAttributes = new { @class = "form-control" } }) *@
 			<label for="Text" class="form-label">Text</label>
 			<textarea class="form-control" id="Text" name="Text"></textarea>
+			 <span class="text-danger" asp-validation-for="@Model.ReviewDTO.Text"></span>
 
 			@*I can't figure it out. By some reason, html helpers doesn't transfer data(author,text) to action (it's empty)*@
 			@*But tags work fine.*@
@@ -61,4 +61,4 @@
 			<button class="btn btn-primary" type="submit">Send</button>
 		</div>
 	}
-}
+
