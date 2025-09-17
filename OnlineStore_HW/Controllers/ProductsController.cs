@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OnlineStore_HW.Models;
+using OnlineStore_HW.Models.DTO;
 using OnlineStore_HW.Models.Utils;
 using OnlineStore_HW.Services;
+using OnlineStore_HW.Models.Views;
+using OnlineStore_HW.Models.Entities;
 
 namespace OnlineStore_HW.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly IProductService _productService;
-
         public ProductsController(IProductService productService)
         {
             _productService = productService;
@@ -31,13 +32,27 @@ namespace OnlineStore_HW.Controllers
             Product? product = _productService.GetProductById((int)id);
             if (product is null) return RedirectToAction("Index");
 
+
+            ProductView model = new ProductView()
+            {
+                Product = product,
+                ReviewDTO = new ReviewDTO()
+            };
+
             ViewBag.Breadcrumb = new List<BreadcrumbItem>()
             {
                 new BreadcrumbItem("Products", "Products", "Index"),
                 new BreadcrumbItem(product.Name, "Products", "ProductById")
 
             };
-            return View(product);   
+            return View(model);   
+        }
+
+        [HttpPost]
+        public IActionResult AddReview([FromForm]ReviewDTO review)
+        {
+            Console.WriteLine("here");
+            return Content($"{review.Author}: {review.Text}");
         }
     }
 }

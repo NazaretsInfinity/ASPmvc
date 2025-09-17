@@ -1,4 +1,4 @@
-﻿using OnlineStore_HW.Models;
+﻿using OnlineStore_HW.Models.Entities;
 
 namespace OnlineStore_HW.Services.Implementations
 {
