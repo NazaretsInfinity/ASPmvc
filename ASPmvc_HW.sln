@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPmvc_Calculator", "ASPmvc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore_HW", "OnlineStore_HW\OnlineStore_HW.csproj", "{7EF6BB5F-B051-4735-85F1-3EA2B5C77857}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcHelpers_HW", "MvcHelpers_HW\MvcHelpers_HW.csproj", "{6B73B856-8F9D-43ED-9426-91D17A2DC97C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7EF6BB5F-B051-4735-85F1-3EA2B5C77857}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EF6BB5F-B051-4735-85F1-3EA2B5C77857}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EF6BB5F-B051-4735-85F1-3EA2B5C77857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
