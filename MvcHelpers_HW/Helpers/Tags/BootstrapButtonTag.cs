@@ -2,7 +2,7 @@
 
 namespace MvcHelpers_HW.Helpers.Tags
 {
-    [HtmlTargetElement("bootstrap-icon")]
+    [HtmlTargetElement("bootstrap-button")]
     public class BootstrapSubmitTag : TagHelper
     {
         public override void Process(TagHelperContext context, TagHelperOutput output)
