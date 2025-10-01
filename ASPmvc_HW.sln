@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore_HW", "OnlineSto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcHelpers_HW", "MvcHelpers_HW\MvcHelpers_HW.csproj", "{6B73B856-8F9D-43ED-9426-91D17A2DC97C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filters_HW", "Filters_HW\Filters_HW.csproj", "{81459845-A979-40F7-9025-F49CA86EA10A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B73B856-8F9D-43ED-9426-91D17A2DC97C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81459845-A979-40F7-9025-F49CA86EA10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81459845-A979-40F7-9025-F49CA86EA10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81459845-A979-40F7-9025-F49CA86EA10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81459845-A979-40F7-9025-F49CA86EA10A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
